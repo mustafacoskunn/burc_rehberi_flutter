@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class BurcListe extends StatelessWidget {
   //staless sadece görüntü gibi düşün değişikilik kabul etmiyor
-  List<Burc> tumBurc;
+  static List<Burc> tumBurc;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,8 @@ class BurcListe extends StatelessWidget {
     List<Burc> burclar = [];
     for (int i = 0; i < 12; i++) {
       String kucukResim = Strings.BURC_ADLARI[i].toLowerCase() + "${i + 1}.png";
-      String buyukResim = Strings.BURC_ADLARI[i] + "_buyuk${i + 1}.png";
+      String buyukResim =
+          Strings.BURC_ADLARI[i].toLowerCase() + "_buyuk${i + 1}.png";
       String burcAdi = Strings.BURC_ADLARI[i];
       String burcTarih = Strings.BURC_TARIHLERI[i];
       String burcDetay = Strings.BURC_GENEL_OZELLIKLERI[i];
